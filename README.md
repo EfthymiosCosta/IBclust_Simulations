@@ -10,5 +10,6 @@ The three scripts compare the DIBmix, KAMILA, K-Prototypes, FAMD with K-Means an
 
 ```r
 install.packages("devtools")  # Install devtools if not already installed
-devtools::install_github("amarkos/IBclust")  # Install DIBclust from GitHub
+devtools::install_github("amarkos/IBclust")  # Install IBclust from GitHub
+install.packages("IBclust") # Install IBclust from CRAN
 ```
