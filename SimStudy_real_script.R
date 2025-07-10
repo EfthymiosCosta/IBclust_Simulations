@@ -1,5 +1,5 @@
 require(here)
-require(DIBclust)
+require(IBclust)
 require(kamila)
 require(clustMixType)
 require(FactoMineR)
@@ -40,16 +40,16 @@ for (i in 1:n){
   }
   # Run methods and store ARI values
   # DIBmix
-  DIBmix_res <- DIBclust::DIBmix(X = data,
-                                 ncl = num_clust,
-                                 catcols = cat_cols,
-                                 contcols = cont_cols,
-                                 randinit = NULL,
-                                 s = -1,
-                                 lambda = -1,
-                                 scale = FALSE,
-                                 maxiter = 100,
-                                 nstart = 100)
+  DIBmix_res <- IBclust::DIBmix(X = data,
+                                ncl = num_clust,
+                                catcols = cat_cols,
+                                contcols = cont_cols,
+                                randinit = NULL,
+                                s = -1,
+                                lambda = -1,
+                                scale = FALSE,
+                                maxiter = 100,
+                                nstart = 100)
   results[i, 2] <- aricode::ARI(DIBmix_res$Cluster, class)
   cat('DIBmix done on', file_names[i], 'dataset.\n')
   save(results, file = 'results.RData')

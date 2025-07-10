@@ -9,7 +9,7 @@ require(fpc)
 require(kamila)
 require(rdist)
 require(aricode)
-require(DIBclust)
+require(IBclust)
 
 # categorized numerical variable function
 intv <- function(vec, class) {
@@ -155,16 +155,16 @@ for (l in 0:(nreps-1)){
               cat('FAMD done for dataset',l+1,'with',clusters,'clusters,',rows,'rows',columns,
                   'columns, an overlap of',overlap, 'and pi',pi_val,'\n')
               # DIBmix
-              outdibmix <- DIBclust::DIBmix(X = mixdt1df,
-                                            ncl = clusters,
-                                            catcols = c(1:(round(columns*cat_ratio))),
-                                            contcols = c((round(columns*cat_ratio)+1):columns),
-                                            randinit = NULL,
-                                            lambda = -1,
-                                            s = -1,
-                                            maxiter = 100,
-                                            nstart = 100,
-                                            select_features = FALSE)
+              outdibmix <- IBclust::DIBmix(X = mixdt1df,
+                                           ncl = clusters,
+                                           catcols = c(1:(round(columns*cat_ratio))),
+                                           contcols = c((round(columns*cat_ratio)+1):columns),
+                                           randinit = NULL,
+                                           lambda = -1,
+                                           s = -1,
+                                           maxiter = 100,
+                                           nstart = 100,
+                                           verbose = FALSE)
               fullfactorial_res <- rbind(fullfactorial_res, data.frame(seed=l+1, nClust=clusters, overlap=overlap, nrows=rows,
                                                                ncols=columns, catratio=cat_ratio, pi=pi_val, method='DIBmix',
                                                                ARI=ARI(outdibmix[[1]], mixdtaux$id),
