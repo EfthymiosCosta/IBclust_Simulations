@@ -157,8 +157,6 @@ for (l in 0:(nreps-1)){
               # DIBmix
               outdibmix <- IBclust::DIBmix(X = mixdt1df,
                                            ncl = clusters,
-                                           catcols = c(1:(round(columns*cat_ratio))),
-                                           contcols = c((round(columns*cat_ratio)+1):columns),
                                            randinit = NULL,
                                            lambda = -1,
                                            s = -1,
