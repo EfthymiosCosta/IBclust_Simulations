@@ -6,6 +6,8 @@ This repository includes `R` scripts that can be used to reproduce the results f
 - `SimStudy_synthetic_script.R`: Benchmarking study on artificial data with non-spherical (elliptical) clusters.
 - `SimStudy_synthetic_sph_script.R`: Benchmarking study on artificial data with spherical clusters.
 
+The `results` directory includes the results files for the 3 simulation studies.
+
 The three scripts compare the DIBmix, KAMILA, K-Prototypes, FAMD with K-Means and PAM with Gower's dissimilarity clustering methods for mixed-type data. `DIBmix` is a function available in the `IBclust` package which you can install directly from GitHub using `devtools`:
 
 ```r
