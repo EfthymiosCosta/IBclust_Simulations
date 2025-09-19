@@ -42,8 +42,6 @@ for (i in 1:n){
   # DIBmix
   DIBmix_res <- IBclust::DIBmix(X = data,
                                 ncl = num_clust,
-                                catcols = cat_cols,
-                                contcols = cont_cols,
                                 randinit = NULL,
                                 s = -1,
                                 lambda = -1,
