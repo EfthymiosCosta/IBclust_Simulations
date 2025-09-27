@@ -75,6 +75,6 @@ for (i in 1:n){
   pam_res <- cluster::pam(gower_dist, diss = TRUE, k = num_clust, do.swap = FALSE, cluster.only = TRUE, nstart=100)
   results[i, 6] <- aricode::ARI(pam_res, class)
   cat('PAM/Gower done on', file_names[i], 'dataset.\n')
-  save(results, file = 'results.RData')
+  save(results, file = 'res/results.RData')
   cat('Dataset', file_names[i], 'complete.\n')
 }

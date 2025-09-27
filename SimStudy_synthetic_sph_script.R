@@ -167,7 +167,7 @@ for (l in 0:(nreps-1)){
                                                                ncols=columns, catratio=cat_ratio, pi=pi_val, method='DIBmix',
                                                                ARI=ARI(outdibmix[[1]], mixdtaux$id),
                                                                AMI=AMI(outdibmix[[1]], mixdtaux$id)))
-              save(fullfactorial_res_sph, file='fullfactorial_res_sph.RData')
+              save(fullfactorial_res_sph, file='res/fullfactorial_res_sph.RData')
               cat('Simulations for data set',l+1,'with',clusters,'clusters,',rows,'rows',columns,
                   'columns, an overlap of',overlap, 'and pi',pi_val,'\n')
               cat('*****  Run',run,'/',tot,' *****','\n')
