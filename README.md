@@ -9,7 +9,7 @@ This repository includes `R` scripts that can be used to reproduce the results o
 - `SimStudy_synthetic_sph_script.R`: Benchmarking study on artificial data with spherical clusters.
 - `aov_pairwise.R`: Script for performing a repeated-measures analysis of variance (ANOVA) comparing average ARI and AMI scores between DIBmix and each of the 4 competing methods. The ARI and AMI values are obtained from the simulation results on the synthetic data.
 
-The `res` directory includes the results files for the 3 simulation studies (synthetic non-spherical, synthetic spherical, real-world data), and the simulation results for the knee heuristic. The results for the pairwise repeated-measures ANOVAs are in the `anova_res` director.
+The `res` directory includes the results files for the 3 simulation studies (synthetic non-spherical, synthetic spherical, real-world data), and the simulation results for the knee heuristic. The results for the pairwise repeated-measures ANOVAs are in the `anova_res` directory.
 
 `DIBmix` is a function available in the `IBclust` package which you can install either from CRAN or directly from GitHub using `devtools`:
 
