@@ -107,5 +107,5 @@ for (i in 1:nreps){
   knee <- kneedle::kneedle(x = c(2:8), y = infos,
                            decreasing = FALSE)
   res_df_knee_sep[i, 8] <- knee[1]
-  saveRDS(res_df_knee_sep, file = 'res_df_knee_sep.RDS')
+  saveRDS(res_df_knee_sep, file = 'res/res_df_knee_sep.RDS')
 }
