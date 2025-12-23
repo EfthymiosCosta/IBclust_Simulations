@@ -6,6 +6,7 @@ This repository includes `R` scripts that can be used to reproduce the results o
 - `DIBmix_GAP_sim_sep.R`: Random generation of 100 synthetic data sets including 4 spherical clusters with low overlap. The features for each data set are randomly independently permuted to produce 100 reference data sets, on which the DIBmix algorithm is run. The DIBmix algorithm is run with 2 up to 8 clusters for each data set and its reference data sets and the Gap statistic is computed.
 - `DIBmix_knee_sim_nonsep.R`: Random generation of 100 synthetic data sets including 4 non-spherical (elliptical) clusters with moderate overlap. The DIBmix algorithm is run with 2 up to 8 clusters for each data set and the knee of the mutual information curve is detected.
 - `DIBmix_knee_sim_sep.R`: Random generation of 100 synthetic data sets including 4 spherical clusters with low overlap. The DIBmix algorithm is run with 2 up to 8 clusters for each data set and the knee of the mutual information curve is detected.
+- `DIBmix_runtimes.R`: Runtime analysis of DIBmix, KAMILA, K-Prototypes, FAMD/K-Means & Gower/PAM on publicly available data sets.
 - `SimStudy_real_script.R`: Simulations on ten real-world datasets of mixed-type (included in the `data` directory).
 - `SimStudy_synthetic_script.R`: Benchmarking study on artificial data with non-spherical (elliptical) clusters.
 - `SimStudy_synthetic_sph_script.R`: Benchmarking study on artificial data with spherical clusters.
