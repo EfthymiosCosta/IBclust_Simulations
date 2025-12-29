@@ -8,7 +8,7 @@ This repository includes `R` scripts that can be used to reproduce the results o
 - `DIBmix_knee_sim_sep.R`: Random generation of 100 synthetic data sets including 4 spherical clusters with low overlap. The DIBmix algorithm is run with 2 up to 8 clusters for each data set and the knee of the mutual information curve is detected.
 - `DIBmix_runtimes.R`: Runtime analysis of DIBmix, KAMILA, K-Prototypes, FAMD/K-Means & Gower/PAM on publicly available data sets of mixed-type.
 - `SimStudy_real_script.R`: Applications of DIBmix, KAMILA, K-Prototypes, FAMD/K-Means & Gower/PAM on publicy available data sets of mixed-type (included in the `data` directory).
-- `SimStudy_DEC_script.R`: Applications of Deep Embedded Clustering on publicly available data sets of mixed-type
+- `SimStudy_DEC_script.R`: Applications of Deep Embedded Clustering (DEC) on publicly available data sets of mixed-type.
 - `SimStudy_synthetic_script.R`: Benchmarking study on artificial data with non-spherical (elliptical) clusters.
 - `SimStudy_synthetic_sph_script.R`: Benchmarking study on artificial data with spherical clusters.
 - `aov_pairwise.R`: Script for performing a repeated-measures analysis of variance (ANOVA) comparing average ARI and AMI scores between DIBmix and each of the 4 competing methods. The ARI and AMI values are obtained from the simulation results on the synthetic data.
