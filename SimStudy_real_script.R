@@ -40,6 +40,8 @@ for (i in 1:n){
   }
   # Run methods and store ARI values
   # DIBmix
+  # Check if nrow(X) > 1000 to use Nystrom
+  nystrom <- nrow(X) > 1000
   DIBmix_res <- IBclust::DIBmix(X = data,
                                 ncl = num_clust,
                                 randinit = NULL,
@@ -47,7 +49,8 @@ for (i in 1:n){
                                 lambda = -1,
                                 scale = FALSE,
                                 maxiter = 100,
-                                nstart = 100)
+                                nstart = 100,
+                                nystrom = nystrom)
   results[i, 2] <- aricode::ARI(DIBmix_res$Cluster, class)
   cat('DIBmix done on', file_names[i], 'dataset.\n')
   save(results, file = 'results.RData')

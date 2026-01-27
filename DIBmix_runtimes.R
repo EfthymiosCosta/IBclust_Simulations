@@ -51,6 +51,7 @@ process_dataset <- function(i, files, file_names, base_dir) {
     check.names = FALSE
   )
   
+  nystrom <- nrow(data) > 1000
   # DIBmix with hyperparameter search
   start_time <- Sys.time()
   DIBmix_res <- IBclust::DIBmix(X = data,
@@ -60,7 +61,8 @@ process_dataset <- function(i, files, file_names, base_dir) {
                                 lambda = -1,
                                 scale = FALSE,
                                 maxiter = 100,
-                                nstart = 100)
+                                nstart = 100,
+                                nystrom = nystrom)
   end_time <- Sys.time()
   dataset_runtimes[1, 2] <- as.numeric(difftime(end_time, start_time, units = "secs"))
   
@@ -73,7 +75,8 @@ process_dataset <- function(i, files, file_names, base_dir) {
                                   lambda = DIBmix_res$lambda,
                                   scale = FALSE,
                                   maxiter = 100,
-                                  nstart = 100)
+                                  nstart = 100,
+                                  nystrom = nystrom)
   end_time <- Sys.time()
   dataset_runtimes[1, 3] <- as.numeric(difftime(end_time, start_time, units = "secs"))
   
