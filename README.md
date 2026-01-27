@@ -14,7 +14,7 @@ This repository includes `R` scripts that can be used to reproduce the results o
 - `aov_pairwise.R`: Script for performing a repeated-measures analysis of variance (ANOVA) comparing average ARI and AMI scores between DIBmix and each of the 4 competing methods. The ARI and AMI values are obtained from the simulation results on the synthetic data.
 - `nystrom_benchmark.R`: Script for performing a benchmarking study on the effect of the number of landmark points used in Nyström approximation on the runtime and cluster recovery performance of the Adult/Census Income data set.
 
-The `res` directory includes the results files for the 3 simulation studies (synthetic non-spherical, synthetic spherical, real-world data), the simulation results for the knee heuristic and the Gap statistic, the runtime analysis results and the benchmarking study on the number of landmark points used in Nyström approximation. The results for the pairwise repeated-measures ANOVAs are in the `anova_res` directory.
+The `res` directory includes the results files for the 3 simulation studies (synthetic non-spherical, synthetic spherical, real-world data), the simulation results for the knee heuristic and the Gap statistic, the runtime analysis results and the results of the  benchmarking study on the number of landmark points used in Nyström approximation. The results for the pairwise repeated-measures ANOVAs are in the `anova_res` directory.
 
 `DIBmix` is a function available in the `IBclust` package which you can install either from CRAN or directly from GitHub using `devtools`:
 
